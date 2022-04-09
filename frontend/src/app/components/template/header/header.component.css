@@ -1,0 +1,28 @@
+.navbar {
+    background-color: #333;
+    border-bottom: solid 5px yellow;
+    height: 80px;
+    box-sizing: content-box;
+}
+
+.navbar-brand {
+    display: inline-block;
+    height: 90px;
+    padding: 15px;
+
+}
+
+img {
+    height: 100%;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    color: #ffff;
+}
+
+a {
+    color: #ffff;
+    font-size: 1.2rem;
+}

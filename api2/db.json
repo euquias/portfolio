@@ -1,0 +1,88 @@
+{
+  "produto": [
+    {
+      "nome": "euquias araujo",
+      "sabor": "calabresa",
+      "bebida": "coca cola",
+      "endereco": "mesquita",
+      "formadepagamento": "cartao",
+      "valor": "100",
+      "id": 3
+    },
+    {
+      "nome": "gsdfgsdfg",
+      "sabor": "sdfgsdfg",
+      "bebida": "sfdgdfg",
+      "endereco": "sdfgsfgd",
+      "formadepagamento": "sdffgsdfg",
+      "valor": "sdfsdfgsdfg",
+      "id": 4
+    },
+    {
+      "nome": "Euquias Cabuloso",
+      "sabor": "calabresa",
+      "bebida": "coca",
+      "endereco": "valparaiso",
+      "formadepagamento": "debito",
+      "valor": "10000",
+      "id": 5
+    }
+  ],
+  "menu": [
+    {
+      "id": "pizza1",
+      "imagepath": "",
+      "name": "calabresa",
+      "description": "massa, molho de tomate, musarela, calabresa azeitona oregano",
+      "price": 25,
+      "restaurantId": "Afavorita"
+    },
+    {
+      "id": "donut",
+      "imagepath": "",
+      "name": "Donut",
+      "description": "Coberto com chantilly",
+      "price": 2.5,
+      "restaurantId": "bread-bakery"
+    },
+    {
+      "id": "pizza3",
+      "imagepath": "",
+      "name": "portuguesa",
+      "description": "massa, molho, ovo, calabresa, tomate",
+      "price": 5.5,
+      "restaurantId": "Afavorita"
+    }
+  ],
+  "menubebida": [
+    {
+      "bebida": "coca",
+      "price": 6.5
+    },
+    {
+      "bebida": "fanta",
+      "price": 6
+    },
+    {
+      "bebida": "suco",
+      "price": 5.5
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Julia",
+      "date": "2017-01-23T18:25:43",
+      "rating": 4.5,
+      "comments": "Tudo muito bom, entrega no tempo certo",
+      "restaurantId": "bread-bakery"
+    },
+    {
+      "name": "Aline",
+      "date": "2016-12-12T18:25:43",
+      "rating": 3,
+      "comments": "NÃO recomendo. O recheio é só um creme, não tem camarão e nem carne",
+      "restaurantId": "bread-bakery"
+    }
+  ],
+  "orders": []
+}
