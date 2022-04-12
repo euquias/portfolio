@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CadastoProdutoComponent } from './views/cadasto-produto/cadasto-produto.component';
+
 import { ClienteComponent } from './views/cliente/cliente.component';
 import { HomeComponent } from './views/home/home.component';
+import { CadastoProdutoComponent } from './views/produto/produto.component';
 
 
 const routes: Routes = [

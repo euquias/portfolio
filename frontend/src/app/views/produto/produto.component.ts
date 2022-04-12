@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-cadasto-produto',
-  templateUrl: './cadasto-produto.component.html',
-  styleUrls: ['./cadasto-produto.component.css']
+  selector: 'app-produto',
+  templateUrl: './produto.component.html',
+  styleUrls: ['./produto.component.css']
 })
 export class CadastoProdutoComponent implements OnInit {
 
-  constructor() { }
+  constructor(  ) { }
 
   ngOnInit(): void {
   }
