@@ -1,0 +1,29 @@
+<div class="card-bory" >
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>produto</th>
+                <th>valor</th>
+                <td>ação</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let produto of  produtos">
+                <td>{{produto.id}}</td>
+                <td>{{produto.name}}</td>
+                <td>{{produto.price}}</td>
+                <td>
+                    <span class="float-right">
+                        <button type="button" class="btn btn-outline-warnig mb-1 btn-sm" [routerLink]="['atualiza']">
+                            Atualizar
+                        </button>
+                        <button type="button" class="btn btn-outline-danger mb-1 btn-sm" [routerLink]="['remover']">
+                            Remover
+                        </button>
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

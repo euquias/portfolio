@@ -1,4 +1,4 @@
- <div class="card">
+<div class="card">
   <div class="card-header">
     <div class="nav">
       <h4>produto</h4>
@@ -7,31 +7,6 @@
       <button type="button" class="btn btn-primary" (click)="adiciona()">Novo Produto</button>
     </div>
   </div>
-  </div>
-  <div class="card-bory">
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>produto</th>
-          <th></th>
-        </tr>  
-      </thead>
-      <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-          <td>
-            <span class="float-right">
-              <button type="button" class="btn btn-outline-warnig mb-1 btn-sm" [routerLink]="['atualiza']">
-                Atualizar
-              </button>
-              <button type="button" class="btn btn-outline-danger mb-1 btn-sm" [routerLink]="['remover']">
-                Remover
-              </button>
-            </span>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div> 
+</div>
+<app-exibir-produto></app-exibir-produto>
+

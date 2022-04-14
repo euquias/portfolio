@@ -12,7 +12,7 @@ import { ClienteComponent } from './views/cliente/cliente.component';
 import { CriarProdutoComponent } from './views/produto/produto-crud/criar-produto/criar-produto.component';
 import { AtualizarProdutoComponent } from './views/produto/produto-crud/atualizar-produto/atualizar-produto.component';
 import { RemoverProdutoComponent } from './views/produto/produto-crud/remover-produto/remover-produto.component';
-import { ExipirProdutoComponent } from './views/produto/produto-crud/exipir-produto/exipir-produto.component';
+
 import { HttpClientModule } from '@angular/common/http'
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { ExibirProdutoComponent } from './views/produto/produto-crud/exibir-produto/exibir-produto.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { MatInputModule } from '@angular/material/input';
     CriarProdutoComponent,
     AtualizarProdutoComponent,
     RemoverProdutoComponent,
-    ExipirProdutoComponent,
+    ExibirProdutoComponent,
+   
 
   ],
   imports: [
