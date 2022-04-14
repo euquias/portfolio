@@ -26,5 +26,8 @@ export class ExibirProdutoComponent implements OnInit {
        this.router.navigate(['/update', id], {relativeTo: this.route});   
     console.log(id)
   } 
+  oneremove(id): void{
+      this.router.navigate(['/remover',id], {relativeTo: this.route} )
+  }
 
 }

@@ -7,8 +7,8 @@ import { produto } from './produto-crud/produto.model';
   providedIn: 'root'
 })
 export class ProdutoService {
- 
- 
+
+
   static readById(id: string) {
     throw new Error('Method not implemented.');
   }
@@ -29,16 +29,20 @@ export class ProdutoService {
   create(produto: produto): Observable<produto> {
     return this.httpclient.post<produto>(this.api, produto)
   }
-  read():Observable<produto[]>{
+  read(): Observable<produto[]> {
     return this.httpclient.get<produto[]>(this.api)
   }
   readById(id: string): Observable<produto> {
     const url = `${this.api}/${id}`;
     return this.httpclient.get<produto>(url);
   }
-   update(pedido: produto): Observable<produto> {
+  update(pedido: produto): Observable<produto> {
     const url = `${this.api}/${pedido.id}`;
     return this.httpclient.put<produto>(url, pedido);
-  } 
+  }
+  deletar(id: number): Observable<produto> {
+    const url = `${this.api}/${id}`;
+    return this.httpclient.delete<produto>(url);
+  }
 }
 

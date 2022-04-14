@@ -24,9 +24,9 @@ export class AtualizarProdutoComponent implements OnInit {
       this.produto = produto
     });
   }
-    salvar(): void {
+  salvar(): void {
    this.produtoservice.update(this.produto).subscribe(() =>{
-    /*  this.produtoservice.showOnMessage('Pedido atualizado com sucesso!')  */
+ /*     this.produtoservice.showOnMessage('Pedido atualizado com sucesso!')  */
      this.router.navigate(['produto'])
     } )
   } 

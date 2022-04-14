@@ -6,6 +6,7 @@ import { HomeComponent } from './views/home/home.component';
 import { AtualizarProdutoComponent } from './views/produto/produto-crud/atualizar-produto/atualizar-produto.component';
 import { CriarProdutoComponent } from './views/produto/produto-crud/criar-produto/criar-produto.component';
 import { ExibirProdutoComponent } from './views/produto/produto-crud/exibir-produto/exibir-produto.component';
+import { RemoverProdutoComponent } from './views/produto/produto-crud/remover-produto/remover-produto.component';
 import { CadastoProdutoComponent } from './views/produto/produto.component';
 
 
@@ -29,6 +30,10 @@ const routes: Routes = [
 {
   path:'update/:id',
   component:AtualizarProdutoComponent
+},
+{
+  path:'remover/:id',
+  component:RemoverProdutoComponent
 }
 ];
 
