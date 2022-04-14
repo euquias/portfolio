@@ -7,6 +7,11 @@ import { produto } from './produto-crud/produto.model';
   providedIn: 'root'
 })
 export class ProdutoService {
+ 
+ 
+  static readById(id: string) {
+    throw new Error('Method not implemented.');
+  }
 
   api = 'http://localhost:3001/produto'
 
@@ -27,6 +32,13 @@ export class ProdutoService {
   read():Observable<produto[]>{
     return this.httpclient.get<produto[]>(this.api)
   }
-
+  readById(id: string): Observable<produto> {
+    const url = `${this.api}/${id}`;
+    return this.httpclient.get<produto>(url);
+  }
+   update(pedido: produto): Observable<produto> {
+    const url = `${this.api}/${pedido.id}`;
+    return this.httpclient.put<produto>(url, pedido);
+  } 
 }
 

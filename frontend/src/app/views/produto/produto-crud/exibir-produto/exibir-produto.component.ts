@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProdutoService } from '../../produto.service';
 import { produto } from '../produto.model';
 
@@ -10,7 +11,9 @@ import { produto } from '../produto.model';
 export class ExibirProdutoComponent implements OnInit {
   produtos: produto[];
   constructor(
-    private produtoservice: ProdutoService
+    private produtoservice: ProdutoService,
+    private router: Router,
+    private route:ActivatedRoute
   ) { }
 
   ngOnInit(): void {
@@ -19,5 +22,9 @@ export class ExibirProdutoComponent implements OnInit {
       console.log(produtos)
     })
   }
+  onedit(id): void{
+       this.router.navigate(['/update', id], {relativeTo: this.route});   
+    console.log(id)
+  } 
 
 }
