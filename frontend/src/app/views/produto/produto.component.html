@@ -4,7 +4,7 @@
       <h4>produto</h4>
     </div>
     <div class="nav justify-content-end">
-      <button type="button" class="btn btn-primary" [routerLink]="['novo']">Novo Produto</button>
+      <button type="button" class="btn btn-primary" (click)="adiciona()">Novo Produto</button>
     </div>
   </div>
   </div>
@@ -15,7 +15,7 @@
           <th>#</th>
           <th>produto</th>
           <th></th>
-        </tr>
+        </tr>  
       </thead>
       <tbody>
         <tr>
