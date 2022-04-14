@@ -23,13 +23,13 @@ export class RemoverProdutoComponent implements OnInit {
     });
   }
   remover(): void {
-    this.produtoservice.deletar(this.produto.id).subscribe(() =>{
-  /*     this.produtoservice.showOnMessage('Pedido atualizado com sucesso!')  */
+    this.produtoservice.deletar(this.produto.id).subscribe(() => {
+      /*     this.produtoservice.showOnMessage('Pedido atualizado com sucesso!')  */
       this.router.navigate(['produto'])
-     } )
-   } 
-   cancel(): void {
-     this.router.navigate(['produto'])
-   }
+    })
+  }
+  cancel(): void {
+    this.router.navigate(['produto'])
+  }
 
 }
