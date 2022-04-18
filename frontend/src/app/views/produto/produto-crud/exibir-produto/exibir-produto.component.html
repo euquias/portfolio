@@ -1,4 +1,4 @@
-<div class="card-bory" >
+<div class="card-bory">
     <table class="table table-hover">
         <thead>
             <tr>
@@ -15,10 +15,11 @@
                 <td>{{produto.price}}</td>
                 <td>
                     <span class="float-right">
-                        <button type="button" class="btn btn-outline-warnig mb-1 btn-sm" (click)="onedit(produto.id)">
+                        <button type="button" class="btn btn-outline-secondary mb-1 btn-sm"  (click)="onedit(produto.id)">
                             Atualizar
                         </button>
-                        <button type="button" class="btn btn-outline-danger mb-1 btn-sm" (click)="oneremove(produto.id)" >
+                        <button type="button" class="btn btn-outline-danger mb-1 btn-sm"
+                            (click)="oneremove(produto.id)">
                             Remover
                         </button>
                     </span>
