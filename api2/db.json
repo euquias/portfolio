@@ -1,24 +1,19 @@
 {
   "produto": [
     {
-      "id": 3,
-      "name": "euquias araujo 2222",
-      "price": "calabresa"
+      "name": "dfgdfg",
+      "price": "dfgdfg",
+      "id": 15
     },
     {
       "name": "euquias cabuloso",
-      "price": "10000000",
-      "id": 7
+      "price": "903209232309",
+      "id": 16
     },
     {
-      "name": "euquias cabuloso 100%",
-      "price": "1000000000000",
-      "id": 8
-    },
-    {
-      "name": "euquias 100% TI",
-      "price": "2000000",
-      "id": 9
+      "name": "euquias",
+      "price": "23.303",
+      "id": 17
     }
   ]
 }

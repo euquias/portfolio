@@ -21,6 +21,8 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ExibirProdutoComponent } from './views/produto/produto-crud/exibir-produto/exibir-produto.component';
+import { LoginComponent } from './views/cliente/login/login.component';
+import { CadastroUsuarioComponent } from './views/cliente/cadastro-usuario/cadastro-usuario.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { ExibirProdutoComponent } from './views/produto/produto-crud/exibir-prod
     AtualizarProdutoComponent,
     RemoverProdutoComponent,
     ExibirProdutoComponent,
+    LoginComponent,
+    CadastroUsuarioComponent,
    
 
   ],

@@ -1,17 +1,28 @@
-<div class="contener">
-    <form class="form">
-        <h4>Atualizar Produto</h4>
-        <mat-form-field>
-            <input matInput placeholder="nome" [(ngModel)]="produto.name" name="name">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="valor" [(ngModel)]="produto.price" name="price">
-        </mat-form-field>
-    </form>
-    <button class="button1" mat-raised-button color="primary" (click)="remover()">
-        Deletar
-    </button>
-    <button class="button2" mat-raised-button color="primary" (click)="cancel()">
-        Canselar
-    </button>
+<div class=" d-flex p-4 justify-content-center">
+    <div class="card " style="width: 30rem;">
+        <div class="card-header">
+            <div class="nav">
+                <h4>Deletar Produto</h4>
+            </div>
+            <div class="col-md-10">
+                <label for="validationCustom02" class="form-label">Nome</label>
+                <input type="text" class="form-control" [(ngModel)]="produto.name" name="name">
+            </div>
+            <div class="col-md-10">
+                <label for="validationCustom02" class="form-label">valor</label>
+                <input type="text" class="form-control" [(ngModel)]="produto.price" name="price">
+                <div class="valid-feedback">
+                    R$:
+                </div>
+            </div>
+            <div class="nav">
+                <span>
+                    <button type="button" class="btn btn-warning" (click)="cancel()">Cancelar</button>
+                </span>
+                <span>
+                    <button type="button" class="btn btn-danger" (click)="remover()">Deletar</button>
+                </span>
+            </div>
+        </div>
+    </div>
 </div>
