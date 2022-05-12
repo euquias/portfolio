@@ -24,6 +24,16 @@ module.exports = app => {
       .get(app.api.category.getById)
       .post(app.api.category.save) 
       .delete(app.api.category.remove) 
+
+
+      app.route('/articles')
+      .get(app.api.article.get)
+      .post(app.api.article.save)
+    
+      app.route('/articles/:id')
+      .get(app.api.article.getById)
+      .post(app.api.article.save) 
+      .delete(app.api.article.remove) 
       
   /* app.route('/stats')
    .all(app.config.passport.authenticate())
