@@ -1,0 +1,44 @@
+PostgreSQL 
+login:2022
+senha:2022
+port:5432
+
+nome da tabela: usuario
+////////////////////////////////
+nome do banco de dados: banco-final
+{
+    "name":"jean",
+    "email":"jean@gmail.com",
+    "password":"123456",
+    "confirmPassword":"123456"
+
+{
+
+
+http://localhost:3000/signin // consulta //
+http://localhost:3000/users  // cadastra//
+http://localhost:3000/categories  // cadastra//
+   
+{
+    "email":"willmagalhaes25@gmail.com",
+    "password":"123456"
+    "id": 40,
+    "name": "euquias",
+    "email": "willmagalhaes25@gmail.com",
+    "admin": false,
+    "iat": 1633095000,
+    "exp": 1633354200,
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NDAsIm5hbWUiOiJldXF1aWFzIiwiZW1haWwiOiJ3aWxsbWFnYWxoYWVzMjVAZ21
+haWwuY29tIiwiYWRtaW4iOmZhbHNlLCJpYXQiOjE2MzMwOTUwMDAsImV4cCI6MTYzMzM1NDIwMH0.4ZC1xM6qE_tGQMAWxbM9PIY02qCJZ9ak4sSlBuYBbAA"
+}
+
+
+}
+exemplo de cadastro de usuario:
+{
+    "name":"lucas",
+    "email":"lucas@gmail.com",
+    "password":"2021",
+    "confirmPassword":"2021",
+    "admin": "false"
+}
