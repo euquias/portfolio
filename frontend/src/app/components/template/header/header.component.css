@@ -43,13 +43,13 @@
 }
 
 .conteudo-title {
-  font-weight: 200;
+  font-weight: 200px;
   font-size: 3.2rem;
   color: #fff;
 }
 
 .conteudo-sub-title {
-  font-size: 24;
+  font-size: 1.2rem;
   color: #fff;
 }
 
@@ -81,7 +81,7 @@
   height: 430px;
 }
 
-@media(max-width: 380px) {
+@media(max-width: 900px) {
   .section2 {
     display: flex;
   }
@@ -94,4 +94,18 @@
   html{
     scroll-behavior: smooth;
   }
- 
+  @media(max-width: 900px) {
+    .conteudo-title {
+      font-weight: 200px;
+      font-size: 2.1rem;
+      color: #fff;
+    }
+    .conteudo-sub-title {
+      font-size: 1.0rem;
+      color: #fff;
+    }
+    .saiba {
+     display: none;
+    }
+  
+  }
