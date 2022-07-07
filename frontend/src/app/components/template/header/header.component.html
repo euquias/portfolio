@@ -1,34 +1,53 @@
-<!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-<nav class="navbar navbar-expand-lg ">
+<div class="header">
+  <nav class="navbar p-3 navbar-expand-lg">
     <div class="container-fluid">
-        <span class="navbar-brand">
-            <img src=".." alt="logo" />
-        </span>
-        <div class="nav" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" [routerLink]="['/']"
-                     routerLinkActive="active">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" [routerLink]="['/produto']"
-                    routerLinkActive="active">Crud De Produto</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" [routerLink]="['/cliente']"
-                    routerLinkActive="active">Cliente</a>
-                </li>
-            </ul>
-        </div> 
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-light" aria-current="page" [routerLink]="['/']"
+              routerLinkActive="active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-light" aria-current="page" href="#sobre">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-light" aria-current="page" href="#habilidades">Habilidade</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-light" aria-current="page" href="#dashboard">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-light" aria-current="page" href="#contato">Contato</a>
+          </li>
+          <li class="nav-item">
+            <span *ngIf="islogin()">
+              <a class="nav-link" aria-current="page" [routerLink]="['/produtos']" routerLinkActive="active">CURD</a>
+            </span>
+          </li>
+        </ul>
+      </div>
     </div>
-</nav>
-<!-- <nav class="navbar navbar-light bg-light">
-    <div class="container-fluid">
-        <span class="navbar-text">
-            <router-outlet></router-outlet>
-        </span>
+    <div class="login">
+      <app-user-detall></app-user-detall>
     </div>
-</nav> -->
+  </nav>
+  <!-- end barra de naveção -->
+  <!-- duas dives --> 
+  <div class="main">
+    <div class="section1">
+      <div class="conteudo">
+        <h1 class="conteudo-title">Euquias <br>desenvolvedor<br>full stack</h1>
+        <p class="conteudo-sub-title">serviços tecnologia de ponta</p>      
+       <button class="saiba" href="#contato">Saiba Mais</button>
+      </div>
+      <div class="perfil" [@prefilappeared]="perfilstate">
+        <img class="perfil-img " src="../../../../assets/imgs/celula.png" alt="Euquias">
+      </div>
+    </div>
+  </div>
+</div>
+<app-bory></app-bory>  
+<app-footer></app-footer>

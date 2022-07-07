@@ -1,26 +1,28 @@
 <div class=" d-flex p-4 justify-content-center">
-    <div class="card" style="width: 35rem;">
+    <div class="card" style="width: 30rem;">
         <div class="card-header">
             <div class="nav">
                 <h4>Cria Produto</h4>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-11">
                 <label for="validationCustom02" class="form-label">Nome</label>
                 <input type="text" class="form-control" placeholder="nome" [(ngModel)]="produto.name" name="name">
                 <div class="valid-feedback">
                     ex:relogio
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-11">
                 <label for="validationCustom02" class="form-label">valor</label>
                 <input type="text" class="form-control" placeholder="valor" [(ngModel)]="produto.price" name="price">
                 <div class="valid-feedback">
                     R$:
                 </div>
             </div>
-            <div class="nav justify-content-end">
-                <button type="button" class="btn btn-warning" (click)="cancel()">Cancelar</button>
-                <button type="button" class="btn btn-primary" (click)="criarproduto()">Salvar</button>
+            <div class="btm">
+                <div class="nav justify-content-start">
+                    <button type="button" class="btn btn-warning m-1" (click)="cancel()">Cancelar</button>
+                    <button type="button" class="btn btn-primary m-1" (click)="criarproduto()">Salvar</button>
+                </div>
             </div>
         </div>
     </div>

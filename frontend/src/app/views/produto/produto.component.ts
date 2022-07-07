@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-
+import { ActivatedRoute, Router } from '@angular/router';
+import { LoginService } from 'src/app/views/cliente/login.service';
 
 @Component({
   selector: 'app-produto',
@@ -10,7 +10,8 @@ import { Router } from '@angular/router';
 export class CadastoProdutoComponent implements OnInit {
 
   constructor(
-    private router: Router
+    private router: Router,
+    private loginservice:LoginService
   ) { }
 
   ngOnInit(): void {
@@ -18,6 +19,9 @@ export class CadastoProdutoComponent implements OnInit {
 
   adiciona(): void {
     this.router.navigate(['/criaproduto'])
+  } 
+  islogin():boolean{
+    return this.loginservice.islogin()
   }
 
 }

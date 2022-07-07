@@ -10,7 +10,10 @@ import { produto } from '../produto.model';
 })
 export class AtualizarProdutoComponent implements OnInit {
 
-  produto: produto
+  produto: produto ={
+    name:'',
+    price:null
+  }
 
   constructor(
     private produtoservice: ProdutoService,
@@ -25,12 +28,17 @@ export class AtualizarProdutoComponent implements OnInit {
     });
   }
   salvar(): void {
-    this.produtoservice.update(this.produto).subscribe(() => {
-      /*     this.produtoservice.showOnMessage('Pedido atualizado com sucesso!')  */
-      this.router.navigate(['produto'])
-    })
-  }
+    this.produtoservice.update(this.produto)
+    .subscribe(users =>
+      this.produtoservice.showmessage('Cadastro realizado com sucesso!'),
+      responser =>
+      this.produtoservice.showmessage(responser.error.message),
+      ()=>{
+        this.router.navigate(['produtos'])
+      }
+      )
+    }
   cancel(): void {
-    this.router.navigate(['produto'])
+    this.router.navigate(['produtos'])
   }
-}
+ }

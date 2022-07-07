@@ -1,13 +1,15 @@
-<div class=" d-flex p-4 justify-content-center">
-  <div class="card" style="width: 50rem;">
-    <div class="card-header">
-      <div class="nav">
-        <h4>produto</h4>
+<div class="card-bory" *ngIf="islogin()">
+  <div class=" d-flex p-4 justify-content-center">
+    <div class="card" style="width: 50rem;">
+      <div class="card-header">
+        <div class="nav">
+          <h4>CRUD-Produto</h4>
+        </div>
+        <div class="nav justify-content-end">
+          <button type="button" class="btn btn-primary" (click)="adiciona()">Novo Produto</button>
+        </div>
+        <app-exibir-produto></app-exibir-produto>
       </div>
-      <div class="nav justify-content-end">
-        <button type="button" class="btn btn-primary" (click)="adiciona()">Novo Produto</button>
-      </div>
-      <app-exibir-produto></app-exibir-produto>
     </div>
   </div>
-</div>
+</div> 

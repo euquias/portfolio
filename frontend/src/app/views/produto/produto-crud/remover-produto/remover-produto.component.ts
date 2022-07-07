@@ -9,7 +9,10 @@ import { produto } from '../produto.model';
   styleUrls: ['./remover-produto.component.css']
 })
 export class RemoverProdutoComponent implements OnInit {
-  produto: produto
+  produto: produto ={
+    name:'',
+    price:null
+  }
   constructor(
     private produtoservice: ProdutoService,
     private router: Router,
@@ -22,14 +25,13 @@ export class RemoverProdutoComponent implements OnInit {
       this.produto = produto
     });
   }
+  cancel(): void {
+    this.router.navigate(['produtos'])
+  }
   remover(): void {
     this.produtoservice.deletar(this.produto.id).subscribe(() => {
-      /*     this.produtoservice.showOnMessage('Pedido atualizado com sucesso!')  */
-      this.router.navigate(['produto'])
+      this.produtoservice.showmessage('Produto excluido com Susseco') 
+      this.router.navigate(['produtos']);
     })
   }
-  cancel(): void {
-    this.router.navigate(['produto'])
-  }
-
 }

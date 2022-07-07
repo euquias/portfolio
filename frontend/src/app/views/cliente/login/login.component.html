@@ -1,72 +1,28 @@
-
-<!doctype html>
-<html lang="en">
-
-<head>
-  <!--  <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.88.1">
-    <title>Signin Template · Bootstrap v5.1</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/"> -->
-
-
-
-  <!-- Bootstrap core CSS -->
-  <!-- <link href="" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style> -->
-
-
-  <!-- Custom styles for this template -->
-  <!-- <link href="signin.css" rel="stylesheet"> -->
-</head>
-
-<body class="text-center">
-
+<div class="container mx-auto">
+  <div class="title">
+    <h3>Login</h3>
+  </div>
+  <div class="subtitle">
+    <h5>Faça Seu Logim ou Registre.</h5>
+  </div>
   <main class="form-signin">
-    <form>
-      <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-      <h1 class="h3 mb-3 fw-normal">Faça seu Logim</h1>
-
-      <div class="form-floating">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Email address</label>
+    <form [formGroup]="loginform">
+      <div class="form-floating d-grid gap-2 col-11 mx-auto">
+        <input type="text" class="form-control" id="floatingInput" formControlName="email"
+          placeholder="name@example.com">
+        <label for="floatingInput">Digite seu Email</label>
       </div>
-      <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <div class="form-floating d-grid gap-2 col-11 mx-auto">
+        <input type="password" class="form-control" id="floatingPassword" formControlName="password"
+          placeholder="Password">
         <label for="floatingPassword">Password</label>
       </div>
-
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
+      <div class="butoens">
+        <div class="d-grid gap-2 col-6 mx-auto">
+          <button class="btn btn-primary" (click)="logar()" type="button">Logim</button>
+          <button class="btn btn-primary" (click)="cadastra()" type="button">Primeiro Acesso</button>
+        </div>
       </div>
-      <div class="d-grid gap-2 col-6 mx-auto">
-        <button class="btn btn-primary" type="button">Logim</button>
-        <button class="btn btn-primary" type="button">Cadastro</button>
-      </div>
-      <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
     </form>
   </main>
-
-</body>
-
-</html>
+</div>

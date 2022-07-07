@@ -9,25 +9,29 @@ import { produto } from '../produto.model';
   styleUrls: ['./exibir-produto.component.css']
 })
 export class ExibirProdutoComponent implements OnInit {
+
   produtos: produto[];
+
   constructor(
     private produtoservice: ProdutoService,
     private router: Router,
-    private route:ActivatedRoute
+    private route: ActivatedRoute,
+
   ) { }
 
   ngOnInit(): void {
-    this.produtoservice.read().subscribe(produtos =>{
-      this.produtos= produtos
+    this.produtoservice.read().subscribe(produtos => {
+      this.produtos = produtos
       console.log(produtos)
     })
   }
-  onedit(id): void{
-       this.router.navigate(['/update', id], {relativeTo: this.route});   
+  onedit(id): void {
+    this.router.navigate(['/update', id], { relativeTo: this.route });
     console.log(id)
-  } 
-  oneremove(id): void{
-      this.router.navigate(['/remover',id], {relativeTo: this.route} )
   }
+  oneremove(id): void {
+    this.router.navigate(['/remover', id], { relativeTo: this.route })
+  }
+
 
 }

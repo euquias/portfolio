@@ -6,22 +6,21 @@
             </div>
             <div class="col-md-10">
                 <label for="validationCustom02" class="form-label">Nome</label>
-                <input type="text" class="form-control" [(ngModel)]="produto.name" name="name">
+                <input type="text" class="form-control" [(ngModel)]="produto.name" name="name" disabled >
             </div>
             <div class="col-md-10">
                 <label for="validationCustom02" class="form-label">valor</label>
-                <input type="text" class="form-control" [(ngModel)]="produto.price" name="price">
+                <input type="text" class="form-control" [(ngModel)]="produto.price" name="price" disabled>
                 <div class="valid-feedback">
                     R$:
                 </div>
             </div>
-            <div class="nav">
-                <span>
-                    <button type="button" class="btn btn-warning" (click)="cancel()">Cancelar</button>
-                </span>
-                <span>
-                    <button type="button" class="btn btn-danger" (click)="remover()">Deletar</button>
-                </span>
+
+            <div class="nav justify-content-start">
+                <div class="btm">
+                    <button type="button" class="btn btn-warning m-1" (click)="cancel()">Cancelar</button>
+                    <button type="button" class="btn btn-danger m-1" (click)="remover()" >Deletar</button>
+                </div>  
             </div>
         </div>
     </div>

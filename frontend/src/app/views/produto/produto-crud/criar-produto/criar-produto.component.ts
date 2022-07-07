@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProdutoService } from '../../produto.service';
 import { Router } from '@angular/router';
 import { produto } from '../produto.model';
-/* import { FormBuilder, FormGroup } from '@angular/forms'; */
+
 
 @Component({
   selector: 'app-criar-produto',
@@ -13,8 +13,7 @@ export class CriarProdutoComponent implements OnInit {
 
   produto: produto = {
     name: '',
-    price: null,
-    id: 0
+    price: '',
   }
 
   /* form: FormGroup */
@@ -27,14 +26,17 @@ export class CriarProdutoComponent implements OnInit {
   ngOnInit(): void {
   }
   criarproduto(): void {
-    this.produtoservice.create(this.produto).subscribe(() => {
-    /*   this.ProdutoService.showOnMessage('pedido salvo') */
-      this.router.navigate(['/produto'])
-    }
-    ) 
+    this.produtoservice.create(this.produto)
+    .subscribe(users =>
+      this.produtoservice.showmessage('Cadastro realizado com sucesso!'),
+      responser =>
+        this.produtoservice.showmessage(responser.error.message),
+        ()=>{
+          this.router.navigate(['produtos'])
+        }
+    )
   }
   cancel(): void {
-    this.router.navigate(['/produto'])
+    this.router.navigate(['/produtos'])
   }
-
-}
+} 
