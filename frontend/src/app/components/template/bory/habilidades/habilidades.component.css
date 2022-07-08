@@ -1,0 +1,17 @@
+  .habilidade {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  p{
+    font-weight: 200px;
+  font-size: 1.3rem;
+  }
+/*   @media(max-width:480px) {
+    .card-tecnologia {
+      display: flex;
+      height: 80px;
+     
+    
+    } 
+  } */
