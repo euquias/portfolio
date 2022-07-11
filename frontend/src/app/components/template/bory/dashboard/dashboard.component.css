@@ -1,0 +1,103 @@
+.Dashboard {
+    display: block;
+  }
+ 
+  .Dashboard {
+    width: 1000px;
+    height: 400px;
+    background-image: linear-gradient(to right, #120537, #003a71, #006fa6, #00a8cf, #12e2eb);
+ 
+  }
+  .infor{
+    display: flex;
+    margin-top: 200px;
+    width: 300px;
+    height: 150px;
+    border-radius: 8px;
+    margin-right: 20px;
+    margin-bottom: 20px; 
+    background-color: #fff;
+    border:  1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  }
+ 
+/*   .card-Dashboard {
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
+ 
+  }
+  .card-title{
+    display: flex;
+    justify-content: center;
+    font-size: 2.1rem;
+  }
+ 
+  .card-infor {
+    margin-top: 3px;
+    width: 300px;
+    height: 200px;
+    padding-left: 60px;
+    font-size: 1.3rem;
+  }
+ 
+  @media(max-width:800px) {
+    .Dashboard {
+      display: block;
+      padding-top: 50px;
+      padding-left: 350px;
+      align-content: center;
+      justify-content: center;
+ 
+    }
+  }
+  @media(max-width:800px) {
+   .card-infor {
+     margin-top: 3px;
+     width: 350px;
+    height: 90px;
+ 
+   }
+ }
+ 
+  @media(max-width:800px) {
+   .card-Dashboard {
+     width: 300px;
+     height: 230px;
+ 
+    }
+  }
+  
+  .usuario {
+    display: flex;
+    padding-top: 5px;
+  }
+ 
+  .icon-usuario {
+    display: flex;
+ 
+  }
+ 
+  .produto {
+    display: flex;
+    padding-top: 15px;
+  }
+ 
+  .icon-produto {
+    padding-left: 5px;
+    display: flex;
+ 
+  }
+ 
+  .nuber {
+    display: flex;
+    font-size: 3.1rem;
+    padding-left: 100px;
+  }
+  .icone1{
+   color: red;
+ }
+  .icone2{
+    color:darkgrey;
+  } */
