@@ -1,41 +1,14 @@
 <div class="Dashboard">
-    <!-- <div class="infor m-5 ">
-        <div class="card-icon">
-            <i class="material-icons">
-                person
-            </i>
-        </div>
-        <div class="usuario">
-            <span class="title">usuarios</span>
-            <span class="values">25</span>
-        </div>
-    </div>
-    <div class="infor m-5">
-        <div class="card-icon">
-            <i class="material-icons"> 
-                <span class="material-symbols-outlined">
-                    file_open
-                    </span>
-            </i>
-        </div>
-        <div class="usuario">
-            <span class="title">produtos</span>
-            <span class="values">25</span>
-        </div>
-    </div> -->
-   
     <div class="title">
-        <i class="material-icons">home</i>
-        Dashboard
-    </div>
-    <div>
-        
-        <p class="sub-title">portifolio</p>
-    </div>
-    
-    <div class="card-infor">
-        <p>pessoas que fizero reviw <br> no meu sistema</p>
-        <button type="button" class="btn btn-info">Saiba mais</button>
+        <a>
+            <i class="material-icons">dashboard</i>
+            Dashboard
+            <p class="sub-title">portifolio-CRUD</p>
+        </a>
+        <div class="infor">
+            <p>Faça voce tambem o cadastro.<br>Esse e um reviw de pessoas de cadastreo e logaran no meu sistema</p>
+            <button type="button" class="btn btn-info">Saiba mais</button>
+        </div>
     </div>
     <div class="progress-bar" [style]="progresso">
         <span class="number">{{(progresso / 100) | percent}} <p>usuario</p></span>
@@ -61,5 +34,4 @@
             <circle cx="75" cy="75" r="65" stroke="rgb(225, 63, 79)" stroke-width="20" fill="none" />
         </svg>
     </div>
-
 </div>
