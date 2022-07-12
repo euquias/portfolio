@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,23 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-   couter = 0;
   constructor() { }
-
+  
+   progresso: number = 10;
+   progresso1: number = 20;
+   progresso2: number = 50;
   ngOnInit(): void {
   }
 
-  coco(couter:number ){ setInterval(() =>{
-    const el =
-    document.querySelector('number');
-    const elvalue=
-    Number(el.getAttribute('data-value'));
-    if(couter !==elvalue){
-      couter++;
-      el.innerHTML = '${´couter´}';
-    }
-  
-  }, 80);
 
-}
 }

@@ -23,21 +23,43 @@
             <span class="values">25</span>
         </div>
     </div> -->
-
-
-    <!-- <div class="card-infor">
-           <p>pessoas que fizero reviw <br> no meu sistema</p>
-           <button type="button" class="btn btn-info">Saiba mais</button>
    
-       </div> -->
-
-    <div class="progress-bar">
-        <span class="number" data-value="100"></span>
+    <div class="title">
+        <i class="material-icons">home</i>
+        Dashboard
+    </div>
+    <div>
+        
+        <p class="sub-title">portifolio</p>
+    </div>
+    
+    <div class="card-infor">
+        <p>pessoas que fizero reviw <br> no meu sistema</p>
+        <button type="button" class="btn btn-info">Saiba mais</button>
+    </div>
+    <div class="progress-bar" [style]="progresso">
+        <span class="number">{{(progresso / 100) | percent}} <p>usuario</p></span>
         <svg helght="150" width="150" class="circle">
-            <circle cx="75" cy="75" r="65" stroke="#d1c5fc" stroke-width="20" fill="none" />
+            <circle cx="75" cy="75" r="65" stroke="#fff" stroke-width="20" fill="none" />
         </svg>
     </div>
-
-
+    <div class="progress-bar">
+        <span class="number">
+            <p>32%</p>
+            <p>ADM</p>
+        </span>
+        <svg helght="150" width="150" class="circle">
+            <circle cx="75" cy="75" r="65" stroke="rgb(233, 135, 100)" stroke-width="20" fill="none" />
+        </svg>
+    </div>
+    <div class="progress-bar" [style]="progresso2">
+        <span class="number">
+            <p>32%</p>
+            <p>produtos</p>
+        </span>
+        <svg helght="150" width="150" class="circle">
+            <circle cx="75" cy="75" r="65" stroke="rgb(225, 63, 79)" stroke-width="20" fill="none" />
+        </svg>
+    </div>
 
 </div>
