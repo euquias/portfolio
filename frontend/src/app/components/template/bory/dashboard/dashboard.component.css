@@ -91,6 +91,9 @@ span {
   }
   
   .infor {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     margin-top: 20px;
     width: 300px;
     height: 200px;
@@ -105,41 +108,7 @@ span {
 }
 @media(max-width: 900px) {
   .progress-bar {
-    display: flex;
-    margin-top: 100px;
-    margin-left: 100px;
-    position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    outline: 1px solid rgba(209, 197, 252, .5);
-    outline-offset: -1px;
+    display: none;
+ 
   }
-  
-  .progress-bar::after,
-  .number {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform:
-      translate(-50%, -50%);
-  }
-  
-  span {
-    color: #fff;
-  }
-  
-  .circle {
-    stroke-dasharray: 410;
-    stroke-dashoffset: 410;
-    transform: rotate(-90deg);
-    animation: bar-fill 8s linear forwards;
-  }
-  
-  @keyframes bar-fill {
-    100% {
-      stroke-dashoffset: 0;
-    }
-  }
-
 }
