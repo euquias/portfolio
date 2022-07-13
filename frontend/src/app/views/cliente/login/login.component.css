@@ -4,7 +4,7 @@
     flex-direction: column;
     width: 500px;
     height: 400px;
-    margin-top: 20px; 
+    margin-top: 100px; 
     background-color: #00b7ff;
     /* box-shadow: 2px 2px 2px 1px #fff(0, 0, 0, 0.5); */
 }
@@ -40,26 +40,6 @@ form {
 .butoens {
     margin-top: 35px;
 }
-
-/* @media (max-width: 900px) {
-
-    .container {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        width: 380px;
-        height: 400px;
-        margin-top: 0;
-
-    }
-
-    .butoens {
-        display: flex;
-        justify-content: center;
-        margin-top: 35px;
-    }
-
-} */
 
 @media (max-width: 900px) {
 
