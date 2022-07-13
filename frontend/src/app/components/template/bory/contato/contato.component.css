@@ -1,0 +1,23 @@
+.contato {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+   
+  }
+  
+  .texto {
+    font-size: 4.2rem;
+    color: black;
+  }
+  .col-xs-12{
+    display: flex;
+    align-items: center;
+  }
+   .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  } 
