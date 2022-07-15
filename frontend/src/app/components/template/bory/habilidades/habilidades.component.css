@@ -7,7 +7,7 @@
     font-weight: 200px;
   font-size: 2.3rem;
   }
-  @media(max-width: 900px) {
+  @media(max-width: 1600px) {
     .habilidade{
       max-width: 100%;
       padding: 10px;
