@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { Observable } from "rxjs";
-import { tap } from 'rxjs/operators'
+import { EMPTY, Observable } from "rxjs";
+import { catchError, map, tap } from 'rxjs/operators'
 import { Users } from "./users.model";
 import { MatSnackBar } from '@angular/material/snack-bar'
 import { Router } from "@angular/router";
@@ -15,16 +15,21 @@ export class LoginService {
 
     constructor(private http: HttpClient, private snackbar: MatSnackBar, private router: Router) { }
 
-    showmessage(msg: string): void {
+    showmessage(msg: string, isError: boolean = false): void {
         this.snackbar.open(msg, 'x', {
             duration: 4000,
             horizontalPosition: "right",
-            verticalPosition: "top"
+            verticalPosition: "top",
+            panelClass: isError ? ['msg-error'] : ['msg-success']
         })
     }
     login(email: string, password: string): Observable<Users> {
         return this.http.post<Users>(`${api}/signin`, { email: email, password: password })
             .pipe(tap(users => this.users = users))
+            .pipe
+                (map(obj => obj),
+                    catchError((e) => this.errorhandler(e))
+                )
     }
     cadastra(name: string, email: string, password: string, confirmPassword: string): Observable<Users> {
         return this.http.post<Users>(`${api}/users`,
@@ -37,9 +42,13 @@ export class LoginService {
         this.router.navigate(['/cliente'])
     }
     islogin() {
-        return this.users !== undefined  
+        return this.users !== undefined
     }
- 
+    errorhandler(e: any): Observable<any>{
+        this.showmessage('Ocorreu um erro!', true)
+        return EMPTY
+    }
+
 }
 
 
