@@ -26,14 +26,15 @@ export class LoginService {
     login(email: string, password: string): Observable<Users> {
         return this.http.post<Users>(`${api}/signin`, { email: email, password: password })
             .pipe(tap(users => this.users = users))
-            .pipe
-                (map(obj => obj),
-                    catchError((e) => this.errorhandler(e))
-                )
+            /*  .pipe
+            (map((obj) => obj),
+                catchError((e) => this.errorhandler(e))
+            )  */
     }
     cadastra(name: string, email: string, password: string, confirmPassword: string): Observable<Users> {
         return this.http.post<Users>(`${api}/users`,
             { name: name, email: email, password: password, confirmPassword: confirmPassword })
+            
     }
     logout() {
         this.users = undefined; this.router.navigate(['/cliente'])
@@ -44,8 +45,8 @@ export class LoginService {
     islogin() {
         return this.users !== undefined
     }
-    errorhandler(e: any): Observable<any>{
-        this.showmessage('Ocorreu um erro!', true)
+    errorhandler(e: any): Observable<any> {
+        this.showmessage((e), true)
         return EMPTY
     }
 

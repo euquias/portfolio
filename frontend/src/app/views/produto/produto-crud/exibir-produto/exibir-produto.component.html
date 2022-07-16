@@ -12,7 +12,7 @@
             <tr *ngFor="let produto of  produtos ">
                 <td>{{produto.id}}</td>
                 <td>{{produto.name}}</td>
-                <td>{{produto.price | currency: 'BRL': true}}</td>
+                <td>{{produto.price | currency: 'BRL': symbol}}</td>
                 <td>
                     <span class="float-right">
                         <button type="button" class="btn btn-outline-warning mb-1 btn-sm m-1"   (click)="onedit(produto.id)">
