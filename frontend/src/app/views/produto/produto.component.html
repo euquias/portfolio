@@ -1,13 +1,43 @@
 <div class="container-fluid">
-  <nav class="nav justify-content-end">
-    <a class="nav-link" [routerLink]="['/']">
-      <span>volta para o site</span>
+<!--  <nav class="nav justify-content-end">
+  <a class="nav-link" [routerLink]="['/']">
+    <span>volta para o site</span>
       <i class="material-icons">home</i>
     </a>
     <a class="nav-link ">
       <app-user-detall></app-user-detall>
     </a>
-  </nav>
+  </nav> -->
+  <div class="header">
+    <nav class="navbar p-3 navbar-expand-lg">
+      <div class="container">
+          <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" *ngIf="islogin()" [routerLink]="['/']">
+                <span>volta para o site</span>
+                  <i class="material-icons">home</i>
+                </a>
+            </li>
+            <li class="nav-item">
+              <span *ngIf="islogin()">
+                <a class="nav-link active text-light" aria-current="page" [routerLink]="['/produtos']" routerLinkActive="active">CRUD</a>
+              </span> 
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="login">
+        <app-user-detall></app-user-detall>
+      </div>
+    </nav>
+  </div> 
+  
+  
+  
 
   <div class="card-bory" *ngIf="islogin()">
     <div class=" d-flex p-4 justify-content-center">
