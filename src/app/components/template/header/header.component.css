@@ -13,7 +13,7 @@ html{
 .nav-link:hover{
   border-radius: 10px;
   background-color: #003a71;
-}
+} 
 .conteudo {
   display: flex;
   flex-direction: column;
