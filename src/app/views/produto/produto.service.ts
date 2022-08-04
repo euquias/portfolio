@@ -13,7 +13,7 @@ export class ProdutoService {
     throw new Error('Method not implemented.');
   }
 
-  api = 'http://localhost:3000/produtos'
+  api = 'http://localhost:30005/produtos'
 
   constructor(
     private httpclient: HttpClient,
