@@ -6,7 +6,7 @@ import { Users } from "./users.model";
 import { MatSnackBar } from '@angular/material/snack-bar'
 import { Router } from "@angular/router";
 
-const api = 'http://localhost:30005'
+const api = 'https://euquiasapi.herokuapp.com'
 
 @Injectable()
 export class LoginService {
