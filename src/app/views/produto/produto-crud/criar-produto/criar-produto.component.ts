@@ -16,7 +16,7 @@ export class CriarProdutoComponent implements OnInit {
     price: '',
   }
 
-  /* form: FormGroup */
+  /* form: FormGroup */ 
   constructor(
     /* private fb:FormBuilder, */
     private produtoservice: ProdutoService,
