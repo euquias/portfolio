@@ -36,7 +36,7 @@ export class CadastroUsuarioComponent implements OnInit {
     ).subscribe(users =>
       this.loginservice.showmessage('Cadastro realizado com sucesso!'),
       responser =>
-        this.loginservice.showmessage(responser.error.message),
+        this.loginservice.showmessage((responser.error.message),true),
         ()=>{
           this.router.navigate(['/login'])
         }

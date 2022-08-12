@@ -26,10 +26,10 @@ export class LoginService {
     login(email: string, password: string): Observable<Users> {
         return this.http.post<Users>(`${api}/signin`, { email: email, password: password })
             .pipe(tap(users => this.users = users))
-             .pipe
+           /*   .pipe
             (map((obj) => obj),
                 catchError((e) => this.errorhandler(e))
-            )  
+            )  */ 
     }
     cadastra(name: string, email: string, password: string, confirmPassword: string): Observable<Users> {
         return this.http.post<Users>(`${api}/users`,
@@ -45,10 +45,10 @@ export class LoginService {
     islogin() {
         return this.users !== undefined
     }
-    errorhandler(e: any): Observable<any> {
+     errorhandler(e: any): Observable<any> {
         this.showmessage(('ouve um erro!!! contate desenvolvedor'), true)
         return EMPTY
-    }
+    } 
 
 }
 

@@ -35,10 +35,11 @@ export class LoginComponent implements OnInit {
       .subscribe(users =>
          this.loginservice.showmessage(`Bem vindo(a),${users.name}`), 
         responser =>
-          this.loginservice.showmessage(responser.error.message),
-          ()=>{
+          this.loginservice.showmessage((responser.error.message), true),
+          
+           ()=>{
             this.router.navigate(['/produtos'])
-          }
+          } 
       )
   }
   cadastra(): void {
