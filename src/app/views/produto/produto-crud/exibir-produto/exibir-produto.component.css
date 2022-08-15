@@ -1,0 +1,24 @@
+i {
+    margin-right: 2px;
+}
+
+.fa-edit {
+    color: #d9cd26;
+}
+
+.fa-trash {
+    color: #e35e6b;
+}
+
+
+@media(max-width: 900px) {
+    .float-right{
+        display: none;
+    }
+}
+@media(min-width: 900px) {
+    .icons{
+        display: none;
+    }
+}
+ 
