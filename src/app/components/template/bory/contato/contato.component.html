@@ -2,26 +2,32 @@
   <div class="texto">Fale Comigo</div>
   <div class="row">
     <div class="d-flex justify-content-center">
-      <form id="contactus" [formGroup]="enviaform" class="form">
+      <form id="contactus" [formGroup]="enviaform" class="form" (ngSubmit)="onSubmit()">
         <div class="row">
           <div class="col-xs-6 col-md-6 form-group p-2">
             <input class="form-control" formControlName="name" placeholder="Name" type="text"
               [ngClass]="{'is-invalid':  submitted && hasError('name') }" />
-            <!--   <div class="valid-feedback" *ngIf="hasError('name') && hasError('name')['minLength']">
-              <p>asdfasdf</p>
-            </div> -->  
+            <div class="invalid-feedback">
+              Digite Seu Nome
+            </div>
           </div>
           <div class="col-xs-6 col-md-6 form-group p-2">
             <input class="form-control" formControlName="email" placeholder="Email" type="email"
               [ngClass]="{'is-invalid':  submitted && hasError('email') }" />
+            <div class="invalid-feedback">
+              informe um email valido
+            </div>
           </div>
         </div>
         <textarea class="form-control" formControlName="assunto" placeholder="Message" rows="5"
           [ngClass]="{'is-invalid':  submitted && hasError('assunto') }">
+          <div class="invalid-feedback">
+           Digite....
+          </div>
       </textarea>
         <div class="row">
           <div class="d-flex justify-content-center p-3">
-            <button class="btn btn btn-danger"   (click)="enviar()" type="submit">Enviar</button>
+            <button class="btn btn btn-danger" type="submit">Enviar</button>
           </div>
         </div>
       </form>
