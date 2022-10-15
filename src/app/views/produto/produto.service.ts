@@ -13,7 +13,8 @@ export class ProdutoService {
     throw new Error('Method not implemented.');
   }
 
-  api = 'https://euquiasapi.herokuapp.com/produtos'
+  /* api = 'https://euquiasapi.herokuapp.com/produtos' */
+  api = 'http://localhost:3000/produtos'
 
   constructor(
     private httpclient: HttpClient,
@@ -30,12 +31,13 @@ export class ProdutoService {
    create(produto: produto): Observable<produto> {
     return this.httpclient.post<produto>(this.api, produto);
   }
-  read(): Observable<produto[]> {
+   read(): Observable<produto[]> {
     return this.httpclient.get<produto[]>(this.api)
-  }
+  } 
+ 
   readById(id: string): Observable<produto> {
     const url = `${this.api}/${id}`;
-    return this.httpclient.get<produto>(url);
+    return this.httpclient.get<produto>(url); 
   }
   update(produto: produto): Observable<produto> {
     const url = `${this.api}/${produto.id}`;

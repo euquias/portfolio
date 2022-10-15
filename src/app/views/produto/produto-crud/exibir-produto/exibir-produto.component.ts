@@ -22,7 +22,7 @@ export class ExibirProdutoComponent implements OnInit {
   ngOnInit(): void {
     this.produtoservice.read().subscribe(produtos => {
       this.produtos = produtos
-      console.log(produtos)
+      console.log(produtos) 
     })
   }
   onedit(id): void {
