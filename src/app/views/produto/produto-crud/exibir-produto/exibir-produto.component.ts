@@ -20,10 +20,11 @@ export class ExibirProdutoComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.produtoservice.read().subscribe(produtos => {
+     this.produtoservice.read().subscribe(produtos => {
       this.produtos = produtos
       console.log(produtos) 
-    })
+    }) 
+  
   }
   onedit(id): void {
     this.router.navigate(['/update', id], { relativeTo: this.route });
