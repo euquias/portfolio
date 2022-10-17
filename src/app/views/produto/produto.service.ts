@@ -13,9 +13,9 @@ export class ProdutoService {
     throw new Error('Method not implemented.');
   }
 
-   api = 'https://euquiasapi.herokuapp.com' 
-  /* api = 'http://localhost:3000/produtos'  */
-  /* api = 'http://localhost:3000' */
+ /*   api = 'https://euquiasapi.herokuapp.com'  */
+   /* api = 'http://localhost:3000/produtos'   */
+    api = 'http://localhost:3000/produtos'  
 
   constructor(
     private httpclient: HttpClient,
@@ -30,13 +30,10 @@ export class ProdutoService {
     })
   }
   create(produto: produto): Observable<produto> {
-    return this.httpclient.post<produto>(this.api, produto);
+    return this.httpclient.post<produto>(`${this.api}`, produto);
   }
-  /*   read(): Observable<produto[]> {
-     return this.httpclient.get<produto[]>(this.api)
-   }  */
   read(): Observable<produto[]> {
-    return this.httpclient.get<produto[]>(`${this.api}/produtos`)
+    return this.httpclient.get<produto[]>(`${this.api}`)
   }
   readById(id: string): Observable<produto> {
     const url = `${this.api}/${id}`;
@@ -47,7 +44,7 @@ export class ProdutoService {
     return this.httpclient.put<produto>(url, produto);
   }
   deletar(id: number): Observable<produto> {
-    const url = `${this.api}/${id}`;
+    const url = `${this.api}/produtos/${id}`;
     return this.httpclient.delete<produto>(url);
   }
 }
