@@ -5,12 +5,13 @@ import { catchError, map, tap } from 'rxjs/operators'
 import { Users } from "./users.model";
 import { MatSnackBar } from '@angular/material/snack-bar'
 import { Router } from "@angular/router";
+import { environment } from "src/environments/environment";
 
-const api = 'https://euquiasapi.herokuapp.com'
+ const api = 'https://euquiasapi.herokuapp.com' 
 
 @Injectable()
 export class LoginService {
-
+  
     users: Users
 
     constructor(private http: HttpClient, private snackbar: MatSnackBar, private router: Router) { }

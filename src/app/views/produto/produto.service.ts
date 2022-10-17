@@ -3,19 +3,17 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { produto } from './produto-crud/produto.model';
 import { MatSnackBar } from '@angular/material/snack-bar'
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProdutoService {
+  private readonly api = `${environment.API}`;
 
   static readById(id: string) {
     throw new Error('Method not implemented.');
   }
-
-     api = 'https://euquiasapi.herokuapp.com'  
-    /* api = 'http://localhost:3000/produtos'  */  
-    
 
   constructor(
     private httpclient: HttpClient,
