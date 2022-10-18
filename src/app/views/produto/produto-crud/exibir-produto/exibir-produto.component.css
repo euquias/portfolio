@@ -10,15 +10,16 @@ i {
     color: #e35e6b;
 }
 
-
-@media(max-width: 900px) {
-    .float-right{
+@media (max-width: 900px) {
+    .float-right {
         display: none;
     }
 }
-@media(min-width: 900px) {
-    .icons{
+@media (min-width: 900px) {
+    .icons {
         display: none;
     }
 }
- 
+.page-link {
+    cursor: pointer;
+}

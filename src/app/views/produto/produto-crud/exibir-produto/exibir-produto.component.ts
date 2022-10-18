@@ -11,6 +11,7 @@ import { IFiltroProduto, IPaginacaoProduto } from "../produto.model";
 export class ExibirProdutoComponent implements OnInit {
   public produtos: IPaginacaoProduto;
   public filtro: IFiltroProduto;
+  public avancarDisabled: boolean = false;
 
   constructor(
     private produtoservice: ProdutoService,
@@ -18,7 +19,7 @@ export class ExibirProdutoComponent implements OnInit {
     private route: ActivatedRoute
   ) {
     this.filtro = {
-      limit: 2,
+      limit: 3,
       page: 1,
     };
   }
@@ -27,13 +28,37 @@ export class ExibirProdutoComponent implements OnInit {
     this.getProdutos();
   }
 
-  getProdutos(filtro: IFiltroProduto = this.filtro) {
+  public getProdutos(filtro: any = this.filtro) {
+    console.log("filtro", filtro);
     this.produtoservice
       .read(filtro)
       .subscribe((produtos: IPaginacaoProduto) => {
         console.log("PRODUTOOOOOOOOO", produtos);
         this.produtos = produtos;
       });
+  }
+
+  public voltar(): void {
+    console.log("voltar");
+  }
+
+  public irParaPagiana(pagina: number): void {
+    console.log("irParaPagiana", pagina);
+  }
+
+  public avancar(): void {
+    const { paginas } = this.produtos;
+    const quantidadeMaximaPaginas = this.filtro.page + 1;
+    if (this.filtro.page >= 1 && quantidadeMaximaPaginas <= paginas) {
+      this.filtro = {
+        ...this.filtro,
+        page: quantidadeMaximaPaginas,
+      };
+      this.getProdutos();
+      this.avancarDisabled = false;
+    } else {
+      this.avancarDisabled = true;
+    }
   }
 
   onedit(id): void {
