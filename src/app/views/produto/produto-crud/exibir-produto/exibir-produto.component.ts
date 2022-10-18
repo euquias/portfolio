@@ -12,6 +12,7 @@ export class ExibirProdutoComponent implements OnInit {
   public produtos: IPaginacaoProduto;
   public filtro: IFiltroProduto;
   public avancarDisabled: boolean = false;
+  public voltarDisabled: boolean = true;
 
   constructor(
     private produtoservice: ProdutoService,
@@ -40,6 +41,18 @@ export class ExibirProdutoComponent implements OnInit {
 
   public voltar(): void {
     console.log("voltar");
+    const { paginas } = this.produtos;
+    const quantidadeMinimoPaginas = this.filtro.page - 1;
+    if (this.filtro.page < 10 && quantidadeMinimoPaginas <= paginas) {
+      this.filtro = {
+        ...this.filtro,
+        page: quantidadeMinimoPaginas,
+      };
+      this.getProdutos();
+      this.voltarDisabled = true;
+    } else {
+      this.voltarDisabled = true;
+    }
   }
 
   public irParaPagiana(pagina: number): void {
