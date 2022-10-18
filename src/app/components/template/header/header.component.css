@@ -1,7 +1,7 @@
 .header {
   background-image: linear-gradient(to right, #120537, #003a71, #006fa6, #00a8cf, #12e2eb);
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 .section1 {
@@ -10,10 +10,10 @@ html{
   align-items: center;
   justify-content: space-around;
 }
-.nav-link:hover{
+.nav-link:hover {
   border-radius: 10px;
   background-color: #003a71;
-} 
+}
 .conteudo {
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@ html{
 }
 
 .conteudo-title {
-  font-weight: 200px;
+  font-weight: bold;
   font-size: 3.2rem;
   color: #fff;
 }
@@ -43,13 +43,13 @@ html{
   box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
 }
- .saiba:active{
+.saiba:active {
   transform: scale(0.98);
-} 
-.saiba:hover{
+}
+.saiba:hover {
   background-color: rgb(32, 32, 170);
 }
-@media(max-width: 800px) {
+@media (max-width: 800px) {
   .perfil-img {
     display: none;
   }
@@ -59,29 +59,27 @@ html{
   height: 430px;
 }
 
-@media(max-width: 900px) {
+@media (max-width: 900px) {
   .section2 {
     display: flex;
   }
-
 }
-  @media(max-width: 900px) {
-    .conteudo-title {
-      font-weight: 200px;
-      font-size: 2.1rem;
-      color: #fff;
-    }
-    .conteudo-sub-title {
-      font-size: 1.0rem;
-      color: #fff;
-    }
-    .saiba {
-     display: none;
-    }
-  
+@media (max-width: 900px) {
+  .conteudo-title {
+    font-weight: 200px;
+    font-size: 2.1rem;
+    color: #fff;
   }
-  @media(min-width: 1600px) {
-    .nav-item{
-      font-size: 2.3rem;
-    }
+  .conteudo-sub-title {
+    font-size: 1rem;
+    color: #fff;
   }
+  .saiba {
+    display: none;
+  }
+}
+@media (min-width: 1600px) {
+  .nav-item {
+    font-size: 2.3rem;
+  }
+}

@@ -1,5 +1,4 @@
 export const environment = {
   production: true,
-  API:'/'
+  API: "https://euquiasapi.herokuapp.com",
 };
- 

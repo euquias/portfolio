@@ -1,105 +1,64 @@
 <table class="table table-hover">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>produto</th>
-            <th>valor</th>
-            <th>ação</th>
-        </tr>
-    </thead>
-    <tbody>
-         <!-- <div *ngIf="produtos$ | async as produtos; else Loading"> -->
-        <tr *ngFor="let produto of  produtos ">
-            <td>{{produto.id}}</td>
-            <td>{{produto.name}}</td>
-            <td>{{produto.price | currency: 'BRL': 'symbol'}}</td>
-            <td>
-                <span class="float-right">
-                    <button type="button" class="btn btn-outline-warning mb-1 btn-sm m-1" (click)="onedit(produto.id)">
-                        Atualizar
-                    </button>
-                    <button type="button" class="btn btn-outline-danger mb-1 btn-sm m-1"
-                        (click)="oneremove(produto.id)">
-                        Remover
-                    </button>
-                </span>
-                <span class="icons">
-                    <a (click)="onedit(produto.id)">
-                        <i class="fa fa-edit"></i>
-                    </a>
-                    <a (click)="oneremove(produto.id)">
-                        <i class="fa fa-trash"></i>
-                    </a>
-                </span>
-            </td>
-        </tr>
-         <!-- </div> -->
-    </tbody>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>produto</th>
+      <th>valor</th>
+      <th>ação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- <div *ngIf="produtos$ | async as produtos; else Loading"> -->
+    <tr *ngFor="let produto of produtos.produtos">
+      <td>{{ produto.id }}</td>
+      <td>{{ produto.name }}</td>
+      <td>{{ produto.price | currency: "BRL":"symbol" }}</td>
+      <td>
+        <span class="float-right">
+          <button
+            type="button"
+            class="btn btn-outline-warning mb-1 btn-sm m-1"
+            (click)="onedit(produto.id)"
+          >
+            Atualizar
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-danger mb-1 btn-sm m-1"
+            (click)="oneremove(produto.id)"
+          >
+            Remover
+          </button>
+        </span>
+        <span class="icons">
+          <a (click)="onedit(produto.id)">
+            <i class="fa fa-edit"></i>
+          </a>
+          <a (click)="oneremove(produto.id)">
+            <i class="fa fa-trash"></i>
+          </a>
+        </span>
+      </td>
+    </tr>
+    <!-- </div> -->
+  </tbody>
 </table>
 <nav aria-label="...">
-    <ul class="pagination justify-content-end">
-        <li class="page-item disabled">
-            <a class="page-link">Previous</a>
-        </li>
-        <li class="page-item"><a class="page-link" href="">1</a></li>
-        <li class="page-item active" aria-current="page">
-            <a class="page-link" href="">2</a>
-        </li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item">
-            <a class="page-link" href="">Next</a>
-        </li>
-    </ul>
+  <ul class="pagination justify-content-end">
+    <li class="page-item disabled">
+      <a class="page-link">Voltar</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="">1</a></li>
+    <li class="page-item active" aria-current="page">
+      <a class="page-link" href="">2</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="">Avançar</a>
+    </li>
+  </ul>
 </nav>
 
-<!-- <ng-templete #Loading>
-<table class="table table-hover" >
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>produto</th>
-            <th>valor</th>
-            <th>ação</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let produto of  produtos" class="card-text placeholder-glow">
-            <td><span class="placeholder col-1">{{produto.id}}</span></td>
-            <td><span class="placeholder col-3"></span></td>
-            <td><span class="placeholder col-6"></span></td>
-            <td>
-                <span class="float-right placeholder-glow">
-                    <button type="button" class="btn bg-secondary mb-1 btn-sm m-1 disabled placeholder col-5">
-
-                    </button>
-                    <button type="button" class="btn bg-secondary mb-1 btn-sm m-1   disabled placeholder col-5">
-                    </button>
-                </span>
-                <!-- <span class="icons">
-                    <a (click)="onedit(produto.id)">
-                        <i class="fa fa-edit"></i>
-                    </a>
-                    <a (click)="oneremove(produto.id)">
-                        <i class="fa fa-trash"></i>
-                    </a>
-                </span> 
-            </td>
-        </tr>
-    </tbody>
-</table>
-<nav aria-label="...">
-    <ul class="pagination justify-content-end placeholder-glow">
-        <li class="page-item">
-            <a class="page-link placeholder">Previous</a>
-        </li>
-        <li class="page-item "><a class="page-link placeholder" href="">1</a></li>
-        <li class="page-item  " aria-current="page">
-            <a class="page-link placeholder" href="">2</a>
-        </li>
-        <li class="page-item"><a class="page-link placeholder" href="#">3</a></li>
-        <li class="page-item">
-            <a class="page-link placeholder" href="">Next</a>
-        </li>
-    </ul>
-</nav>
-</ng-templete> -->
+<pre>
+    {{ produtos | json }}
+</pre>

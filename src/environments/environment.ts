@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  API:'https://euquiasapi.herokuapp.com'
+  API: "http://localhost:3000",
 };
 
 /*
