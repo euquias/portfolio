@@ -3,7 +3,7 @@
     <h3>Login</h3>
   </div>
   <div class="subtitle">
-    <h5>Faça Seu Login</h5>
+    <h5>Faça Seu Login</h5> 
   </div>
   <main class="form-signin">
     <form [formGroup]="loginform">
@@ -19,7 +19,10 @@
       </div>
       <div class="butoens">
         <div class="d-grid gap-2 col-6 mx-auto">
-          <button class="btn btn-primary" (click)="logar()" type="button">Login
+          <button class="btn btn-primary" (click)="logar()" type="button">
+            <div *ngIf=" submitted; else Loading" >
+              Login
+            </div>
           </button>
           <button class="btn btn-primary" (click)="cadastra()" type="button">Primeiro Acesso</button>
         </div>
@@ -29,3 +32,11 @@
   
 </div>
 
+
+<ng-template #Loading>
+  <div class="d-flex justify-content-center">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+</ng-template>

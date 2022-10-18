@@ -36,7 +36,7 @@ export class ContatoComponent implements OnInit {
     })
   }
 
-  onSubmit() {
+  onSubmit() { 
     this.submitted = true;
     if (this.enviaform.valid) {
       this.httpclient.post('https://httpbin.org/post',

@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
 
   users: Users
   loginform: FormGroup
+  submitted = true;
 
   constructor(
     private loginservice: LoginService,
@@ -30,10 +31,12 @@ export class LoginComponent implements OnInit {
   }
 
   logar(): void {
+    this.submitted = false;
     this.loginservice.login(this.loginform.value.email,
       this.loginform.value.password)
-      .subscribe(users =>
-         this.loginservice.showmessage(`Bem vindo(a),${users.name}`), 
+      .subscribe(
+        users =>
+        this.loginservice.showmessage(`Bem vindo(a),${users.name}`), 
         responser =>
           this.loginservice.showmessage((responser.error.message), true),
           
@@ -41,7 +44,7 @@ export class LoginComponent implements OnInit {
             this.router.navigate(['/produtos'])
           } 
       )
-  }
+  } 
   cadastra(): void {
     this.router.navigate(['/cadastra'])
   }
