@@ -11,8 +11,8 @@ import { IFiltroProduto, IPaginacaoProduto } from "../produto.model";
 export class ExibirProdutoComponent implements OnInit {
   public produtos: IPaginacaoProduto;
   public filtro: IFiltroProduto;
-  public avancarDisabled: boolean = false;
-  public voltarDisabled: boolean = true;
+ /*  public avancarDisabled: boolean = false;
+  public voltarDisabled: boolean = true; */
 
   constructor(
     private produtoservice: ProdutoService,
@@ -20,7 +20,7 @@ export class ExibirProdutoComponent implements OnInit {
     private route: ActivatedRoute
   ) {
     this.filtro = {
-      limit: 3,
+      limit: 5,
       page: 1,
     };
   }
@@ -34,7 +34,6 @@ export class ExibirProdutoComponent implements OnInit {
     this.produtoservice
       .read(filtro)
       .subscribe((produtos: IPaginacaoProduto) => {
-        console.log("PRODUTOOOOOOOOO", produtos);
         this.produtos = produtos;
       });
   }
@@ -49,14 +48,14 @@ export class ExibirProdutoComponent implements OnInit {
         page: quantidadeMinimoPaginas,
       };
       this.getProdutos();
-      this.voltarDisabled = true;
+      /* this.voltarDisabled = true; */
     } else {
-      this.voltarDisabled = true;
+      /* this.voltarDisabled = true; */
     }
   }
 
   public irParaPagiana(pagina: number): void {
-    console.log("irParaPagiana", pagina);
+    const { paginas } = this.produtos;
   }
 
   public avancar(): void {
@@ -68,9 +67,9 @@ export class ExibirProdutoComponent implements OnInit {
         page: quantidadeMaximaPaginas,
       };
       this.getProdutos();
-      this.avancarDisabled = false;
+     /*  this.avancarDisabled = false; */
     } else {
-      this.avancarDisabled = true;
+      /* this.avancarDisabled = true; */
     }
   }
 

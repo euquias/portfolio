@@ -14,18 +14,10 @@
       <td>{{ produto.price | currency: "BRL":"symbol" }}</td>
       <td>
         <span class="float-right">
-          <button
-            type="button"
-            class="btn btn-outline-warning mb-1 btn-sm m-1"
-            (click)="onedit(produto.id)"
-          >
+          <button type="button" class="btn btn-outline-warning mb-1 btn-sm m-1" (click)="onedit(produto.id)">
             Atualizar
           </button>
-          <button
-            type="button"
-            class="btn btn-outline-danger mb-1 btn-sm m-1"
-            (click)="oneremove(produto.id)"
-          >
+          <button type="button" class="btn btn-outline-danger mb-1 btn-sm m-1" (click)="oneremove(produto.id)">
             Remover
           </button>
         </span>
@@ -44,29 +36,19 @@
 <nav aria-label="...">
   <ul class="pagination justify-content-end">
     <li class="page-item">
-      <a class="page-link" (click)="voltar()">Voltar</a>
+      <a class="page-link "  (click)="voltar()">Voltar</a>
     </li>
     <li class="page-item">
-      <a class="page-link" (click)="irParaPagiana(1)">1</a>
+      <a class="page-link"  (click)="voltar()">1</a>
     </li>
-    <li class="page-item active" aria-current="page">
-      <a class="page-link" (click)="irParaPagiana(2)">2</a>
-    </li>
-    <li class="page-item">
-      <a class="page-link" (click)="irParaPagiana(3)">3</a>
+    <li class="page-item " aria-current="page">
+      <a class="page-link"  (click)="avancar()">2</a>
     </li>
     <li class="page-item">
-      <a
-        class="page-link"
-        [ngClass]="{ disabled: avancarDisabled }"
-        (click)="avancar()"
-      >
+      <a class="page-link"   (click)="avancar()">
         Avançar
       </a>
     </li>
   </ul>
 </nav>
 
-<pre>
-  {{ produtos | json }}
-</pre>
