@@ -1,69 +1,33 @@
-<div class="header container" id="home">
+<div class="header container-fluid" id="home">
   <nav class="navbar p-3 navbar-expand-lg">
     <div class="container-fluid">
-      <button
-        class="navbar-toggler bg-light"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a
-              class="nav-link active text-light"
-              aria-current="page"
-              [routerLink]="['/']"
-              routerLinkActive="active"
-              >Home</a
-            >
+            <a class="nav-link active text-light" aria-current="page" [routerLink]="['/']"
+              routerLinkActive="active">Home</a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link active text-light"
-              aria-current="page"
-              href="#sobre"
-              >Sobre</a
-            >
+            <a class="nav-link active text-light" aria-current="page" href="#sobre">Sobre</a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link active text-light"
-              aria-current="page"
-              href="#habilidades"
-              >Habilidade</a
-            >
+            <a class="nav-link active text-light" aria-current="page" href="#habilidades">Habilidade</a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link active text-light"
-              aria-current="page"
-              href="#dashboard"
-              >Dashboard</a
-            >
+            <a class="nav-link active text-light" aria-current="page" href="#dashboard">Dashboard</a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link active text-light"
-              aria-current="page"
-              href="#contato"
-              >Contato</a
-            >
+            <a class="nav-link active text-light" aria-current="page" href="#contato">Contato</a>
           </li>
           <li class="nav-item">
             <span>
-              <a
-                class="nav-link active text-light"
-                aria-current="page"
-                [routerLink]="['/produtos']"
-                routerLinkActive="active"
-                >CRUD</a
-              >
+              <a class="nav-link active text-light" aria-current="page" [routerLink]="['/produtos']"
+                routerLinkActive="active">CRUD</a>
             </span>
           </li>
         </ul>
@@ -75,29 +39,21 @@
   </nav>
   <!-- end barra de naveção -->
   <!-- duas dives -->
-  <div class="main">
-    <div class="section1">
-      <div class="conteudo">
-        <div class="conteudo-title">
-          Euquias <br />desenvolvedor<br />full stack
-        </div>
-        <p class="conteudo-sub-title">serviços tecnologia de ponta</p>
-        <a
-          href="https://www.linkedin.com/in/euquias-araujo-326271219"
-          data-placement="top"
-        >
-          <button class="saiba">Saiba Mais</button>
-        </a>
+  <div class="section1">
+    <div class="conteudo">
+      <div class="conteudo-title">
+        Euquias <br />desenvolvedor<br />full stack
       </div>
-      <div class="perfil" [@prefilappeared]="perfilstate">
-        <img
-          class="perfil-img"
-          src="../../../../assets/imgs/celula.png"
-          alt="Euquias"
-        />
-      </div>
+      <p class="conteudo-sub-title">serviços tecnologia de ponta</p>
+      <a href="https://www.linkedin.com/in/euquias-araujo-326271219" data-placement="top">
+        <button class="saiba">Saiba Mais</button>
+      </a>
+    </div>
+    <div class="perfil" [@prefilappeared]="perfilstate">
+      <img class="perfil-img" src="../../../../assets/imgs/celula.png" alt="Euquias" />
     </div>
   </div>
+
 </div>
 <app-bory></app-bory>
 <app-footer></app-footer>

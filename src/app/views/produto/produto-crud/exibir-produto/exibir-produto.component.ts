@@ -14,6 +14,7 @@ export class ExibirProdutoComponent implements OnInit {
  /*  public avancarDisabled: boolean = false;
   public voltarDisabled: boolean = true; */
 
+ 
   constructor(
     private produtoservice: ProdutoService,
     private router: Router,
@@ -24,7 +25,6 @@ export class ExibirProdutoComponent implements OnInit {
       page: 1,
     };
   }
-
   ngOnInit(): void {
     this.getProdutos();
   }
@@ -71,6 +71,10 @@ export class ExibirProdutoComponent implements OnInit {
     } else {
       /* this.avancarDisabled = true; */
     }
+  }
+
+  changepage(event){
+    console.log(event)
   }
 
   onedit(id): void {

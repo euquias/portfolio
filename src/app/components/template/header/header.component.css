@@ -1,23 +1,27 @@
 .header {
   background-image: linear-gradient(to right, #120537, #003a71, #006fa6, #00a8cf, #12e2eb);
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 .section1 {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
+
 .nav-link:hover {
   border-radius: 10px;
   background-color: #003a71;
 }
+
 .conteudo {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+
 }
 
 .conteudo-title {
@@ -43,12 +47,15 @@ html {
   box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
 }
+
 .saiba:active {
   transform: scale(0.98);
 }
+
 .saiba:hover {
   background-color: rgb(32, 32, 170);
 }
+
 @media (max-width: 800px) {
   .perfil-img {
     display: none;
@@ -64,20 +71,24 @@ html {
     display: flex;
   }
 }
+
 @media (max-width: 900px) {
   .conteudo-title {
     font-weight: 200px;
     font-size: 2.1rem;
     color: #fff;
   }
+
   .conteudo-sub-title {
     font-size: 1rem;
     color: #fff;
   }
+
   .saiba {
     display: none;
   }
 }
+
 @media (min-width: 1600px) {
   .nav-item {
     font-size: 2.3rem;

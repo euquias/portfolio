@@ -1,9 +1,7 @@
-.dashboard {
-  display: flex;
-  width: 100%;
+.container-fluid {
   height: 400px;
   background-image: linear-gradient(to right, #120537, #003a71, #006fa6, #00a8cf, #12e2eb);
-  justify-content: center;
+
 }
 
 .title {
@@ -31,6 +29,7 @@
   font-size: 1.3rem;
   color: #fff;
 }
+
 .btn {
   margin-top: 20px;
 }
@@ -65,7 +64,7 @@ span {
   animation: bar-fill 8s linear forwards;
 }
 
-@keyframes bar-fill {
+ @keyframes bar-fill {
   100% {
     stroke-dashoffset: 0;
   }
@@ -109,3 +108,4 @@ span {
     display: none;
   }
 }
+ 
