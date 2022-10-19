@@ -21,7 +21,7 @@ export class ExibirProdutoComponent implements OnInit {
     private route: ActivatedRoute
   ) {
     this.filtro = {
-      limit: 5,
+      limit: 10,
       page: 1,
     };
   }
