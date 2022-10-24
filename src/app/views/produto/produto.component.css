@@ -1,8 +1,10 @@
+
 h4{
     margin-top: 40px;
 }
 .container-fluid{
     background-image: linear-gradient(to right, #120537, #003a71, #006fa6, #00a8cf, #12e2eb);
+    
 } 
 a{
     display: flex;

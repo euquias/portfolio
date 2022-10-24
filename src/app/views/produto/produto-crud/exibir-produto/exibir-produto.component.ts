@@ -11,10 +11,11 @@ import { IFiltroProduto, IPaginacaoProduto } from "../produto.model";
 export class ExibirProdutoComponent implements OnInit {
   public produtos: IPaginacaoProduto;
   public filtro: IFiltroProduto;
- /*  public avancarDisabled: boolean = false;
-  public voltarDisabled: boolean = true; */
 
- 
+  public avancarDisabled: boolean = false;
+  public voltarDisabled: boolean = false;
+
+
   constructor(
     private produtoservice: ProdutoService,
     private router: Router,
@@ -22,9 +23,10 @@ export class ExibirProdutoComponent implements OnInit {
   ) {
     this.filtro = {
       limit: 10,
-      page: 1,
+      page: 2
     };
   }
+
   ngOnInit(): void {
     this.getProdutos();
   }
@@ -54,8 +56,15 @@ export class ExibirProdutoComponent implements OnInit {
     }
   }
 
-  public irParaPagiana(pagina: number): void {
+  public paginaum(pagina: number): void {
     const { paginas } = this.produtos;
+    this.filtro.page = 1;
+    this.getProdutos();
+  }
+  public paginadois(pagina: number): void {
+    const { paginas } = this.produtos;
+    this.filtro.page = 2;
+    this.getProdutos();
   }
 
   public avancar(): void {
@@ -67,22 +76,21 @@ export class ExibirProdutoComponent implements OnInit {
         page: quantidadeMaximaPaginas,
       };
       this.getProdutos();
-     /*  this.avancarDisabled = false; */
+        this.avancarDisabled = false; 
     } else {
-      /* this.avancarDisabled = true; */
+       this.avancarDisabled = true; 
     }
   }
 
-  changepage(event){
-    console.log(event)
-  }
-
-  onedit(id): void {
+  onedit(id: any): void {
     this.router.navigate(["/update", id], { relativeTo: this.route });
     console.log(id);
   }
 
-  oneremove(id): void {
+  oneremove(id: any): void {
     this.router.navigate(["/remover", id], { relativeTo: this.route });
   }
+
+
+
 }

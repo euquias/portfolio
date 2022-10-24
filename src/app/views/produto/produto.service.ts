@@ -51,6 +51,6 @@ export class ProdutoService {
 
   deletar(id: number): Observable<IProduto> {
     const url = `${this.api}/produtos/${id}`;
-    return this.httpclient.delete<IProduto>(url);
+    return this.httpclient.delete<IProduto>(url); 
   }
 }
