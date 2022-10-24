@@ -6,19 +6,13 @@ html {
   scroll-behavior: smooth;
 }
 
-.section1 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-
 .nav-link:hover {
   border-radius: 10px;
   background-color: #003a71;
 }
 
 .conteudo {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
 

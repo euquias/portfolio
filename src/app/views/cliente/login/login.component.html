@@ -20,23 +20,22 @@
       <div class="butoens">
         <div class="d-grid gap-2 col-6 mx-auto">
           <button class="btn btn-primary" (click)="logar()" type="button">
-            <div *ngIf=" submitted; else Loading" >
-              Login
-            </div>
+            Login
+            <!-- <div *ngIf=" submitted; else Loading" >
+            </div> -->
           </button>
           <button class="btn btn-primary" (click)="cadastra()" type="button">Primeiro Acesso</button>
         </div> 
       </div>
     </form>
   </main>
-  
 </div>
 
-
-<ng-template #Loading>
+<!-- tratamento  de error -->
+<!-- <ng-template #Loading>
   <div class="d-flex justify-content-center">
     <div class="spinner-border" role="status">
       <span class="visually-hidden">Loading...</span>
     </div>
   </div>
-</ng-template>
+</ng-template> -->
